@@ -56,7 +56,7 @@ func (cb *StreamControlStateConfig) normalize() *StreamControlStateConfig {
 	}
 
 	if c.MaxChunkStreams == 0 {
-		c.MaxChunkStreams = math.MaxUint32
+		c.MaxChunkStreams = math.MaxInt
 	}
 
 	// ack
@@ -82,7 +82,7 @@ func (cb *StreamControlStateConfig) normalize() *StreamControlStateConfig {
 	// message
 
 	if c.MaxMessageStreams == 0 {
-		c.MaxMessageStreams = math.MaxUint32
+		c.MaxMessageStreams = math.MaxInt
 	}
 
 	if c.MaxMessageSize == 0 {
